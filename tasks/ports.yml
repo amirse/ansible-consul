@@ -1,0 +1,26 @@
+---
+# File: port.yml - open firewall ports
+
+# Add group
+- name: Add port 8301/tcp (perm)
+  firewalld:
+    port: 8301/tcp
+    state: enabled
+    permanent: true
+
+- name: Add port 8301/udp (perm)
+  firewalld:
+    port: 8301/udp
+    state: enabled
+    permanent: true
+
+- name: Add port 8301/tcp (runtime)
+  firewalld:
+    port: 8301/tcp
+    state: enabled
+
+- name: Add port 8301/udp (runtime)
+  firewalld:
+    port: 8301/udp
+    state: enabled
+
