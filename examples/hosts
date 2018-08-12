@@ -1,0 +1,12 @@
+# File: vagrant_hosts
+# Consul cluster node hosts configuration for Vagrant
+#
+# NB: Replace the hosts below with your preferred node hostnames and continue
+#     the 'nodeN' pattern for additional nodes past 'consul3'. There should
+#     be only one node with consul_node_role = "bootstrap"
+#     Do not modify the labels (text appearing between []), however
+
+[consul_instances]
+vault1 consul_iface=eth0 consul_node_role=bootstrap ansible_ssh_user=root 
+vault2 consul_iface=eth0 consul_node_role=server ansible_ssh_user=root 
+vault3 consul_iface=eth0 consul_node_role=server ansible_ssh_user=root 
